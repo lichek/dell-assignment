@@ -1,3 +1,17 @@
+import { question } from 'readline-sync'
+
+
+function skills(array) {
+  let i = 0
+  while (i < 3) {
+    console.log(i + '. ' + array[i].name + ' Damage ' +array[i].damage)
+
+    // i += 1
+    i = i + 1
+  }
+}
+
+
 // having 2 pokemon, with specific oppHP
 const myPokemon = 'Charmander'
 const opponent = 'Mr.Mime'
@@ -10,6 +24,7 @@ console.log('You have encountered a wild ' + opponent)
 console.log('You send out ' + myPokemon)
 console.log(myPokemon + ' has ' + myHP + ' HP')
 console.log(opponent + ' has ' + oppHP + ' HP')
+
 
 
 
@@ -28,8 +43,36 @@ while (myHP > 0 && oppHP > 0) {
   let attackerName = isMyTurn ? myPokemon : opponent
   let defenderName = isMyTurn ? opponent : myPokemon
   // first pokemon attacks
-  console.log(attackerName + ' uses Shadow Ball')
-  console.log('Shadow Ball hits for 50 damage')
+
+  const move = [
+    {
+      name: 'Tackle',
+      damage: 50,
+      type: 'fire',
+    },
+  
+    {
+      name: 'Ember',
+      damage: 50,
+      type: 'fire',
+    },
+  
+    {
+      name: 'Shadow',
+      damage: 50,
+      type: 'water',
+    },
+  ]
+  
+   skills(move)
+   let ansRes = question('Select your attack\n')
+  
+   console.log(move[ansRes].name)
+
+
+
+  console.log(attackerName +[ansRes]) 
+  console.log(' hits for 50 damage')
 
 //const attackDamage =Math.floor(Math.random() * 10)
 
@@ -56,3 +99,4 @@ if (oppHP <= 0) {
   console.log(myPokemon + ' faints')
   console.log('GAME OVER')
 }
+
