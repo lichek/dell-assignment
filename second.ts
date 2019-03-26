@@ -108,3 +108,5 @@ console.log("Your HDD size: " +hddOptions[ansHDD].label)
 
 
 
+
+
