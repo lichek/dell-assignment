@@ -31,50 +31,84 @@ function displayUI(array) {
   console.log("[" + array[6] + "] " + "[" + array[7] + "] " + "[" + array[8] + "]\n")
 }
 
-const tictactoe = ["0","1","2","3","4","5","6","7","8"]
+function repeatplayer(){
+ 
 
+}
+
+
+//its array function to store those value
+
+const tictactoe = ["","","","","","","","",""]
 displayUI(tictactoe)
 
-console.log('Player 1 turn, please insert based on above value you want to:')
+console.log('Player 1 turn, please insert based on above value you want to from 0-8:')
 let anstictaetoe = question('Please input it\n')
 
-while (anstictaetoe[0] >= 'X') {
+let isMyTurn = true
+const player1 = 'X'
+const player2 = 'O'
+//let currentplayer = player1
+
+
+
+while (isMyTurn) {
+       console.log('------------------------------')
+    let taketurn = isMyTurn ? player1 : player2
+    //console.log(+taketurn + ' please insert based on above value you want to from 0-8:')
+    //let anstictaetoe = question('Please input it\n')  
 
 if(anstictaetoe === '0'){
-  tictactoe[0]= 'X'
+  tictactoe[0]= taketurn
   displayUI(tictactoe)
+  
 
 }else if (anstictaetoe === '1'){
-  tictactoe[1]= 'X'
+  tictactoe[1]= taketurn
   displayUI(tictactoe)
 
 }else if (anstictaetoe === '2'){
-  tictactoe[2]= 'X'
+  tictactoe[2]= taketurn
   displayUI(tictactoe)
 
 }else if (anstictaetoe === '3'){
-  tictactoe[3]= 'X'
+  tictactoe[3]= taketurn
   displayUI(tictactoe)
 
 }else if (anstictaetoe === '4'){
-  tictactoe[4]= 'X'
+  tictactoe[4]= taketurn
   displayUI(tictactoe)
 
 }else if (anstictaetoe === '5'){
-  tictactoe[5]= 'X'
+  tictactoe[5]= taketurn
   displayUI(tictactoe)
 
 }else if (anstictaetoe === '6'){
-  tictactoe[6]= 'X'
+  tictactoe[6]= taketurn
   displayUI(tictactoe)
 
 }else if (anstictaetoe === '7'){
-  tictactoe[7]= 'X'
+  tictactoe[7]= taketurn
   displayUI(tictactoe)
 
 }else if (anstictaetoe === '8'){
-  tictactoe[8]= 'X'
+  tictactoe[8]= taketurn
   displayUI(tictactoe)
 
+}break;
+//console.log("nothing")
+
 }
+
+//function check for winner
+function checkforwinner() {
+
+console.log("Checking for Winner...")
+
+let winner
+//let playerone= anstictaetoe //playerone is always X !
+let playertwo= '';
+
+let player1win1 = (tictactoe).length ===3
+
 }
